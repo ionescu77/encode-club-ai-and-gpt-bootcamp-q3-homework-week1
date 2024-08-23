@@ -1,4 +1,4 @@
-# AI and GPT Bootcamp. Homework for week 1
+# AI and GPT Bootcamp. Homework for week 1.
 
 ## Introduction
 
