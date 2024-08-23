@@ -3,7 +3,7 @@
 ## Introduction
 
 In this repo you will find the code and documentation of the **homework for week 1** of the 
-**Encode Club AI and GPT Bootcamp - Q3**.
+**Encode Club AI and GPT Bootcamp Q3 2024**.
 
 The main goal of the first assignment is to use the **OpenAI API**.
 
