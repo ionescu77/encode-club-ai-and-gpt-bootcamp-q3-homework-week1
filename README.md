@@ -126,7 +126,7 @@ while True:
   print("1. I want the recipe for an specific dish")
   print("2. I want a recipe for an specific ingredient")
   print("3. I want suggestions to improve a recipe that I know")
-  option = input("Choose an option (1-3):")
+  option = input("Choose an option (1-3): ")
 
   if option in ["1", "2", "3"]:
     break
@@ -138,26 +138,37 @@ while True:
 1. I want the recipe for an specific dish
 2. I want a recipe for an specific ingredient
 3. I want suggestions to improve a recipe that I know
-Choose an option (1-3):77
+Choose an option (1-3): 77
 Invalid option. Please choose 1, 2, or 3.
 1. I want the recipe for an specific dish
 2. I want a recipe for an specific ingredient
 3. I want suggestions to improve a recipe that I know
-Choose an option (1-3):1
+Choose an option (1-3): 1
 ```
+
+Once we know what the user wants to do, we have to ask the specific ingredient, dish or recipe.
 
 ```python
 # Make the prompt
 if option == "1":
-  dish = input("Enter the name of the dish you want the recipe for:")
+  dish = input("Enter the name of the dish you want the recipe for: ")
   prompt = f"Suggest a detailed recipe for {dish}."
 elif option == "2":
-  ingredient = input("Enter the name of the ingredient you want a recipe for:")
+  ingredient = input("Enter the name of the ingredient you want a recipe for: ")
   prompt = f"Suggest a detailed recipe for {ingredient}."
 else:
   recipe = input("Enter the recipe you want to improve:")
   prompt = f"Suggest improvements to the following recipe: {recipe}."
 ```
+
+```console
+Enter the name of the dish you want the recipe for: spanish omelette
+
+
+```
+
+
+Now we have all the necessary information to construct the phrase with which we will make the API request.
 
 ```python
 # Add the user message
