@@ -18,3 +18,11 @@ The base code is in [ChefGPT.py](https://github.com/Encode-Club-AI-Bootcamp/Gene
 The detailed instructions are here:
 <https://github.com/Encode-Club-AI-Bootcamp/Generative-AI-Applications/blob/main/Lesson-04/exercises/07-Chef-GPT.md>
 
+## Jupyter notebook
+
+The jupyter notebook with all the python code is here:
+<https://github.com/LuisJoseSanchez/encode-club-ai-and-gpt-bootcamp-q3-homework-week1/blob/master/Encode_Club_AI_and_GPT_Bootcamp_Q3_Homework_for_week_1.ipynb>
+
+Notice that you will have to provide your own API key to get it work.
+
+Please, give a ⭐ if you liked this repo!
