@@ -25,8 +25,6 @@ The jupyter notebook with all the python code is here:
 
 Notice that you will have to provide your own API key to get it work.
 
-Please, give a ⭐ if you liked this repo!
-
 ## Python code explained
 
 The first requirement is the installation of `openai` package. The python code has been written in Google Colab, so an exclamation mark is needed to install packages via `pip` command.
@@ -241,3 +239,4 @@ Sure! Here’s a detailed recipe for a classic Spanish omelette, also known as "
 
 Enjoy your Spanish omelette!
 
+Please, give a ⭐ if you liked this repo!
