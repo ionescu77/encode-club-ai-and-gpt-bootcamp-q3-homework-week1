@@ -163,8 +163,6 @@ else:
 
 ```console
 Enter the name of the dish you want the recipe for: spanish omelette
-
-
 ```
 
 
@@ -180,6 +178,8 @@ messages.append(
 )
 ```
 
+Time to make the API call. Cross your fingers 🤞 and be sure you have enough credit 💰 in your OpenAI account.
+
 ```python
 # Make the API call
 response = client.chat.completions.create(
@@ -188,11 +188,56 @@ response = client.chat.completions.create(
 )
 ```
 
+Finally, the `response` array have the answer.
+
 ```python
 # Show the result
 for choice in response.choices:
   print(choice.message.content)
 ```
 
-```console
-```
+Paste here the answer in markdown format:
+
+Sure! Here’s a detailed recipe for a classic Spanish omelette, also known as "Tortilla Española."
+
+### Ingredients:
+- 4 medium-sized potatoes
+- 1 medium onion (optional)
+- 6 large eggs
+- Olive oil
+- Salt
+- Pepper
+
+### Instructions:
+
+1. **Prepare Potatoes and Onion**:
+   - Peel the potatoes and slice them thinly (about 1/8 inch thick).
+   - If you're using onion, chop it finely.
+
+2. **Cook Potatoes and Onion**:
+   - Heat a generous amount of olive oil in a large frying pan over medium heat. You want enough oil to cover the bottom of the pan.
+   - Once the oil is hot, add the sliced potatoes and cook them gently. Stir occasionally, and cook for about 20 minutes until they are soft but not browned.
+   - If using onion, add it to the potatoes about halfway through cooking, and stir until the onion is translucent.
+
+3. **Beat the Eggs**:
+   - While the potatoes are cooking, crack the eggs into a large bowl. Add a pinch of salt and pepper, then whisk until well combined.
+
+4. **Combine Potatoes with Eggs**:
+   - Once the potatoes (and onion, if used) are cooked, use a slotted spoon to transfer them to the bowl with beaten eggs. Mix gently to combine, making sure the potatoes are coated with the egg.
+
+5. **Cook the Omelette**:
+   - Remove most of the oil from the frying pan, leaving just enough to coat the bottom. Heat the pan over medium heat.
+   - Pour the potato and egg mixture into the pan, spreading it evenly. Cook for about 5-7 minutes, or until the bottom is set and lightly browned.
+   - To flip the omelette, place a large plate over the pan and carefully invert the omelette onto the plate. Slide it back into the pan to cook the other side for another 5-7 minutes.
+
+6. **Finish and Serve**:
+   - Once both sides are golden and the omelette is cooked through, slide it onto a serving plate.
+   - Let it cool for a few minutes, then slice into wedges and serve. It can be enjoyed warm or at room temperature.
+
+### Tips for Improvement:
+- **Variations**: Try adding veggies like bell peppers, herbs, or even cheese for different flavors.
+- **Cooking Method**: Some people prefer to bake the tortilla in the oven for a less oily version.
+- **Presentation**: Serve with a fresh side salad or a drizzle of aioli for added flavor.
+
+Enjoy your Spanish omelette!
+
