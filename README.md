@@ -26,3 +26,80 @@ The jupyter notebook with all the python code is here:
 Notice that you will have to provide your own API key to get it work.
 
 Please, give a ⭐ if you liked this repo!
+
+## Python code
+
+```python
+# Install openai API package
+!pip install openai
+```
+
+```python
+# Import the openai module
+from openai import OpenAI
+```
+
+```python
+# Create a new client instance
+client = OpenAI(api_key="XXXXXXXXXXXXXXXXXXXXXXXXXXX")
+```
+
+```python
+# Set the first message
+messages = [
+  {
+    "role": "system",
+    "content": "You are an Spanish experienced chef specializing in vegetarian \
+                cuisine. You are willing to help people by suggesting \
+                detailed vegetarian recipes for dishes they want to cook. \
+                If someone asks you about dishes or ingredients related to \
+                meat or fish, politely tell them that you only handle \
+                inquiries about vegetarian cuisine.",
+  }
+]
+```
+
+
+```python
+# Add another system instruction
+messages.append(
+     {
+          "role": "system",
+          "content": "The client will ask you one of these three topics: \
+                      ingredient-based dish suggestions, recipe requests for \
+                      specific dishes or recipe critiques and improvement \
+                      suggestions. If you don't know the dish or the \
+                      ingredient, you should answer that you don't know the \
+                      dish or ingredient and end the conversation.",
+     }
+)
+```
+
+
+```python
+# More instructions
+messages.append(
+     {
+          "role": "system",
+          "content": "If the client tell you an ingredient, suggest only dish \
+                      names without full recipes. If you are asked for dish \
+                      name then provide a detailed recipe. If the client tells \
+                      you a recipe, offer suggested improvements.",
+     }
+)
+```
+
+
+```python
+# Specify the model used
+model = "gpt-4o-mini"
+```
+
+```python
+
+```
+
+```python
+
+```
+
