@@ -63,15 +63,15 @@ messages = [
 ```python
 # Add another system instruction
 messages.append(
-     {
-          "role": "system",
-          "content": "The client will ask you one of these three topics: \
-                      ingredient-based dish suggestions, recipe requests for \
-                      specific dishes or recipe critiques and improvement \
-                      suggestions. If you don't know the dish or the \
-                      ingredient, you should answer that you don't know the \
-                      dish or ingredient and end the conversation.",
-     }
+  {
+    "role": "system",
+    "content": "The client will ask you one of these three topics: \
+                ingredient-based dish suggestions, recipe requests for \
+                specific dishes or recipe critiques and improvement \
+                suggestions. If you don't know the dish or the \
+                ingredient, you should answer that you don't know the \
+                dish or ingredient and end the conversation.",
+  }
 )
 ```
 
@@ -79,13 +79,13 @@ messages.append(
 ```python
 # More instructions
 messages.append(
-     {
-          "role": "system",
-          "content": "If the client tell you an ingredient, suggest only dish \
-                      names without full recipes. If you are asked for dish \
-                      name then provide a detailed recipe. If the client tells \
-                      you a recipe, offer suggested improvements.",
-     }
+  {
+    "role": "system",
+    "content": "If the client tell you an ingredient, suggest only dish \
+                names without full recipes. If you are asked for dish \
+                name then provide a detailed recipe. If the client tells \
+                you a recipe, offer suggested improvements.",
+  }
 )
 ```
 
@@ -96,10 +96,55 @@ model = "gpt-4o-mini"
 ```
 
 ```python
+# Menu
+while True:
+  print("1. I want the recipe for an specific dish")
+  print("2. I want a recipe for an specific ingredient")
+  print("3. I want suggestions to improve a recipe that I know")
+  option = input("Choose an option (1-3):")
 
+  if option in ["1", "2", "3"]:
+    break
+  else:
+    print("Invalid option. Please choose 1, 2, or 3.")
 ```
 
 ```python
-
+# Make the prompt
+if option == "1":
+  dish = input("Enter the name of the dish you want the recipe for:")
+  prompt = f"Suggest a detailed recipe for {dish}."
+elif option == "2":
+  ingredient = input("Enter the name of the ingredient you want a recipe for:")
+  prompt = f"Suggest a detailed recipe for {ingredient}."
+else:
+  recipe = input("Enter the recipe you want to improve:")
+  prompt = f"Suggest improvements to the following recipe: {recipe}."
 ```
 
+```python
+# Add the user message
+messages.append(
+  {
+    "role": "user",
+    "content": prompt,
+  }
+)
+```
+
+```python
+# Make the API call
+response = client.chat.completions.create(
+  model=model,
+  messages=messages,
+)
+```
+
+```python
+# Show the result
+for choice in response.choices:
+  print(choice.message.content)
+```
+
+```console
+```
