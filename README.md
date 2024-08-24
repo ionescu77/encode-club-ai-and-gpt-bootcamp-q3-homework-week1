@@ -27,12 +27,31 @@ Notice that you will have to provide your own API key to get it work.
 
 Please, give a ⭐ if you liked this repo!
 
-## Python code
+## Python code explained
+
+The first requirement is the installation of openai package. The python code has been written in Google Colab, so an exclamation mark is needed to install packages via `pip` command.
 
 ```python
 # Install openai API package
 !pip install openai
 ```
+
+```console
+Collecting openai
+  Downloading openai-1.42.0-py3-none-any.whl.metadata (22 kB)
+Requirement already satisfied: anyio<5,>=3.5.0 in /usr/local/lib/python3.10/dist-packages (from openai) (3.7.1)
+Requirement already satisfied: distro<2,>=1.7.0 in /usr/lib/python3/dist-packages (from openai) (1.7.0)
+Collecting httpx<1,>=0.23.0 (from openai)
+.
+.
+.
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 318.9/318.9 kB 15.6 MB/s eta 0:00:00
+Downloading h11-0.14.0-py3-none-any.whl (58 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.3/58.3 kB 2.9 MB/s eta 0:00:00
+Installing collected packages: jiter, h11, httpcore, httpx, openai
+Successfully installed h11-0.14.0 httpcore-1.0.5 httpx-0.27.0 jiter-0.5.0 openai-1.42.0
+```
+
 
 ```python
 # Import the openai module
