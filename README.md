@@ -29,7 +29,7 @@ Please, give a ⭐ if you liked this repo!
 
 ## Python code explained
 
-The first requirement is the installation of openai package. The python code has been written in Google Colab, so an exclamation mark is needed to install packages via `pip` command.
+The first requirement is the installation of `openai` package. The python code has been written in Google Colab, so an exclamation mark is needed to install packages via `pip` command.
 
 ```python
 # Install openai API package
@@ -52,6 +52,7 @@ Installing collected packages: jiter, h11, httpcore, httpx, openai
 Successfully installed h11-0.14.0 httpcore-1.0.5 httpx-0.27.0 jiter-0.5.0 openai-1.42.0
 ```
 
+We need to import the class `OpenAI` and use it to instantiate a client with the API Key. Notice that the real API key has been removed from the code, you must provide yours in order to execute the code properly. 
 
 ```python
 # Import the openai module
@@ -62,6 +63,8 @@ from openai import OpenAI
 # Create a new client instance
 client = OpenAI(api_key="XXXXXXXXXXXXXXXXXXXXXXXXXXX")
 ```
+
+OpenAI must be configured to give the proper answers. In this case it will be an Spanish chef specializing in vegetarian cuisine. Notice that we "prepare" OpenAI with all the information we want using the role `system`.
 
 ```python
 # Set the first message
@@ -108,11 +111,14 @@ messages.append(
 )
 ```
 
+There are a few models we can use: GPT4, GPT3.5, GPT4 mini, etc. We must choose one of them to use with our API calls.
 
 ```python
 # Specify the model used
 model = "gpt-4o-mini"
 ```
+
+A menu is shown so the user can choose one the actions required. According to the stament of the exercise, the clien can tell an ingredient, a dish or a recipe. The menu detects incorrect inputs, only options 1, 2 and 3 are allowed.
 
 ```python
 # Menu
@@ -126,6 +132,18 @@ while True:
     break
   else:
     print("Invalid option. Please choose 1, 2, or 3.")
+```
+
+```console
+1. I want the recipe for an specific dish
+2. I want a recipe for an specific ingredient
+3. I want suggestions to improve a recipe that I know
+Choose an option (1-3):77
+Invalid option. Please choose 1, 2, or 3.
+1. I want the recipe for an specific dish
+2. I want a recipe for an specific ingredient
+3. I want suggestions to improve a recipe that I know
+Choose an option (1-3):1
 ```
 
 ```python
