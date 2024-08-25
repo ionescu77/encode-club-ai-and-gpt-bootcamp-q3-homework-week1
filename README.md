@@ -116,7 +116,7 @@ There are a few models we can use: GPT4, GPT3.5, GPT4 mini, etc. We must choose 
 model = "gpt-4o-mini"
 ```
 
-A menu is shown so the user can choose one the actions required. According to the stament of the exercise, the clien can tell an ingredient, a dish or a recipe. The menu detects incorrect inputs, only options 1, 2 and 3 are allowed.
+A menu is shown so the user can choose one the actions required. According to the stament of the exercise, the client can tell an ingredient, a dish or a recipe. The menu detects incorrect inputs, only options 1, 2 and 3 are allowed.
 
 ```python
 # Menu
